@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/api7/main/json-schema/api7-get-get-response-schema.json",
+  "title": "GetGetResponse",
+  "x-generated": "2026-10-16",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/api7-openapi-generated.yml#/components/schemas/GetGetResponse",
+  "type": "object",
+  "properties": {
+    "args": {
+      "type": "object"
+    },
+    "headers": {
+      "type": "object",
+      "properties": {
+        "Accept": {
+          "type": "string"
+        },
+        "Host": {
+          "type": "string"
+        },
+        "User-Agent": {
+          "type": "string"
+        },
+        "X-Amzn-Trace-Id": {
+          "type": "string"
+        },
+        "X-Forwarded-Host": {
+          "type": "string"
+        }
+      }
+    },
+    "origin": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

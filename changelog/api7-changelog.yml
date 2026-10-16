@@ -1,0 +1,20 @@
+generated: '2026-10-15'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.api7.ai/ai-gateway/reference/cloud-admin-api-changelog.md
+sources:
+- https://docs.api7.ai/ai-gateway/reference/cloud-admin-api-changelog.md
+- https://docs.api7.ai/ai-gateway/release-notes.md
+- https://docs.api7.ai/api7-gateway/3.9.x/release-notes.md
+- https://docs.api7.ai/api7-gateway/3.9.x/upgrade-guides/cluster-migration.md
+entries:
+- breaking: true
+  highlights:
+  - POST/invitations/{invitation_id}/resend
+  - 'Deleted required property: owner_user_id'
+  - 'New security requirements: BearerConsoleSession'
+  - Deletedproperty`owner_user_id`Breaking
+  version: 1.6.0
+current_version: 1.6.0
+note: Versioning scheme follows semantic versioning (major.minor.patch).
+docs: https://docs.api7.ai/ai-gateway/reference/cloud-admin-api-changelog.md

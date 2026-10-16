@@ -1,0 +1,28 @@
+generated: '2026-10-15'
+method: searched
+source: https://api7.ai/privacy
+signals:
+  data_subject_request:
+    evidence:
+      - source: https://api7.ai/privacy
+        http_status: 200
+        fetched: null
+        quote: "Depending on what jurisdiction you are located in, you may have certain rights in relation to your personal data. If you expect to request access, correction or deletion of any personal information we hold, or if we change the way we use your information, ... please do so here or via Email your request to support@api7.ai."
+        section: "5. Rights and Approaches of Personal Information Management Access, Correction or Deletion"
+    note: Provides rights to request access, correction, deletion of personal data.
+  incident_notification:
+    evidence:
+      - source: https://api7.ai/privacy
+        http_status: 200
+        fetched: null
+        quote: "In the event of a security incident such as personal information leakage, we will activate contingency plans to prevent the expansion of security incidents, report them in a timely manner in accordance with relevant regulations, and notify you of the relevant situation by sending emails, push notifications, announcements, etc., and give you security advice."
+        section: "Incident handling"
+    note: Commits to notify users of security incidents per regulations.
+  data_retention:
+    evidence:
+      - source: https://api7.ai/privacy
+        http_status: 200
+        fetched: null
+        quote: "Generally, we only retain your information for as long as we provide services to you, and no longer than is necessary to satisfy the relevant purpose of use. After the necessary period, we will delete or anonymize your information, unless otherwise provided by laws and regulations."
+        section: "7. How We Store and Protect Personal Information"
+    note: States retention period limited to service provision and legal requirements.

@@ -1,0 +1,730 @@
+openapi: 3.1.0
+info:
+  title: API7.ai API
+  version: '2026-10-15'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-15: 29 operation(s) read from 13 public documentation page(s) (each
+    operation names its page in x-source). This is not the provider''s published contract; API7.ai has published no machine-readable contract
+    that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 13
+    documentation: 16
+    pages-with-code: 3
+    pages-read: 13
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-15'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.api7.ai/ai-gateway/endpoints/audio.md
+  - https://docs.api7.ai/ai-gateway/reference/ports.md
+  - https://docs.api7.ai/apisix/reference/admin-api.md
+  - https://docs.api7.ai/ai-gateway/endpoints/rerank.md
+  - https://docs.api7.ai/ai-gateway/reference/metrics.md
+  - https://docs.api7.ai/ai-gateway/endpoints/overview.md
+  - https://docs.api7.ai/ai-gateway/endpoints/realtime.md
+  - https://docs.api7.ai/ai-gateway/reference/proxy-api.md
+  - https://docs.api7.ai/ai-gateway/endpoints/chat-audio.md
+  - https://docs.api7.ai/apisix/reference/router-options.md
+  - https://docs.api7.ai/apisix/reference/batch-processor.md
+  - https://docs.api7.ai/ai-gateway/reference/resources-file.md
+  - https://docs.api7.ai/apisix/reference/built-in-variables.md
+servers:
+- url: http://test1.com
+paths:
+  /a2a/{agent}:
+    post:
+      operationId: post_a2a_agent
+      tags:
+      - A2A
+      summary: A2A JSON-RPC calls and caller-authenticated agent-card discovery for registered upstream agents.
+      x-source: https://docs.api7.ai/ai-gateway/endpoints/overview.md
+      parameters:
+      - name: agent
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /a2a/{agent}/.well-known/agent-card.json:
+    get:
+      operationId: get_a2a_agent_well_known_agent_card_json
+      tags:
+      - A2A
+      summary: A2A JSON-RPC calls and caller-authenticated agent-card discovery for registered upstream agents.
+      x-source: https://docs.api7.ai/ai-gateway/endpoints/overview.md
+      parameters:
+      - name: agent
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /anything:
+    get:
+      operationId: get_anything
+      tags:
+      - Anything
+      summary: GET /anything
+      x-source: https://docs.api7.ai/apisix/reference/router-options.md
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAnythingResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl "http://127.0.0.1:9080/anything" -H ''host: test1.com''
+
+          ```'
+  /anything/body-match:
+    get:
+      operationId: get_anything_body_match
+      tags:
+      - Anything
+      summary: GET /anything/body-match
+      x-source: https://docs.api7.ai/apisix/reference/router-options.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -i "http://127.0.0.1:9080/anything/body-match"  -H "Content-Type: application/json"  --data-binary @oversized-body.json
+
+          ```'
+    post:
+      operationId: post_anything_body_match
+      tags:
+      - Anything
+      summary: POST /anything/body-match
+      x-source: https://docs.api7.ai/apisix/reference/router-options.md
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostAnythingBodyMatchRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -i "http://127.0.0.1:9080/anything/body-match"  -H "Content-Type: application/json"  -d ''{"model":"gpt-4"}''
+
+          ```'
+  /anything/johndoe/hello:
+    get:
+      operationId: get_anything_johndoe_hello
+      tags:
+      - Anything
+      summary: GET /anything/johndoe/hello
+      x-source: https://docs.api7.ai/apisix/reference/built-in-variables.md
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAnythingJohndoeHelloResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -i "http://127.0.0.1:9080/anything/johndoe/hello"
+
+          ```'
+  /anything/user/{userid}/profile:
+    get:
+      operationId: get_anything_user_userid_profile
+      tags:
+      - Anything
+      summary: GET /anything/user/{userId}/profile
+      x-source: https://docs.api7.ai/apisix/reference/router-options.md
+      parameters:
+      - name: userid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAnythingUserUseridProfileResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl "http://127.0.0.1:9080/anything/user/123/profile"
+
+          ```'
+  /apisix/admin/plugin_metadata/http-logger:
+    put:
+      operationId: put_apisix_admin_plugin_metadata_http_logger
+      tags:
+      - Apisix
+      summary: PUT /apisix/admin/plugin_metadata/http-logger
+      x-source: https://docs.api7.ai/apisix/reference/batch-processor.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl "http://127.0.0.1:9180/apisix/admin/plugin_metadata/http-logger" -X PUT  -H "X-API-KEY: ${ADMIN_API_KEY}"  -d ''{'
+  /apisix/admin/plugins/{pluginName}:
+    get:
+      operationId: get_apisix_admin_plugins_pluginName
+      tags:
+      - Apisix
+      summary: Retrieve the JSON Schema definition for a specific plugin.
+      x-source: https://docs.api7.ai/apisix/reference/admin-api.md
+      parameters:
+      - name: pluginName
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /apisix/admin/routes/body-match:
+    put:
+      operationId: put_apisix_admin_routes_body_match
+      tags:
+      - Apisix
+      summary: PUT /apisix/admin/routes/body-match
+      x-source: https://docs.api7.ai/apisix/reference/router-options.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl "http://127.0.0.1:9180/apisix/admin/routes/body-match" -X PUT  -H "X-API-KEY: ${ADMIN_API_KEY}"  -d ''{'
+  /apisix/admin/schema/{resource}:
+    get:
+      operationId: get_apisix_admin_schema_resource
+      tags:
+      - Apisix
+      summary: Returns the JSON Schema document used internally by APISIX to validate the named resource type.
+      x-source: https://docs.api7.ai/apisix/reference/admin-api.md
+      parameters:
+      - name: resource
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /apisix/admin/secrets:
+    get:
+      operationId: get_apisix_admin_secrets
+      tags:
+      - Apisix
+      summary: Retrieve all configured secret manager integrations.
+      x-source: https://docs.api7.ai/apisix/reference/admin-api.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /apisix/admin/services/srv_custom_var:
+    patch:
+      operationId: patch_apisix_admin_services_srv_custom_var
+      tags:
+      - Apisix
+      summary: PATCH /apisix/admin/services/srv_custom_var
+      x-source: https://docs.api7.ai/apisix/reference/built-in-variables.md
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchApisixAdminServicesSrvCustomVarResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl "http://127.0.0.1:9180/apisix/admin/services/srv_custom_var" -X PATCH  -H ''X-API-KEY: ${ADMIN_API_KEY}''  -d ''{'
+  /apisix/admin/{adminid}:
+    put:
+      operationId: put_apisix_admin_adminid
+      tags:
+      - Apisix
+      summary: PUT /apisix/admin/routes
+      x-source: https://docs.api7.ai/apisix/reference/router-options.md
+      parameters:
+      - name: adminid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutApisixAdminAdminidResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -i "http://127.0.0.1:9180/apisix/admin/routes" -X PUT  -H "X-API-KEY: ${ADMIN_API_KEY}"  -d ''{'
+        collapsed_from: 2 example path(s) differing only at adminId
+  /debug/pprof/heap:
+    get:
+      operationId: get_debug_pprof_heap
+      tags:
+      - Debug
+      summary: Diagnostics listener
+      x-source: https://docs.api7.ai/ai-gateway/reference/ports.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /get:
+    get:
+      operationId: get_get
+      tags:
+      - Get
+      summary: GET /get
+      x-source: https://docs.api7.ai/apisix/reference/router-options.md
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetGetResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl "http://127.0.0.1:9080/get" -H ''host: test1.com''
+
+          ```'
+  /livez:
+    get:
+      operationId: get_livez
+      tags:
+      - Livez
+      summary: Check whether the proxy listener is alive. Use it for proxy listener health checks, not for model or provider readiness.
+      x-source: https://docs.api7.ai/ai-gateway/endpoints/overview.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /metrics:
+    get:
+      operationId: get_metrics
+      tags:
+      - Metrics
+      summary: Metrics Reference
+      x-source: https://docs.api7.ai/ai-gateway/reference/metrics.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /readyz:
+    get:
+      operationId: get_readyz
+      tags:
+      - Readyz
+      summary: Check whether the instance should receive traffic. Returns 503 while draining.
+      x-source: https://docs.api7.ai/ai-gateway/endpoints/overview.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /status/config:
+    get:
+      operationId: get_status_config
+      tags:
+      - Status
+      summary: Inspect the active or rejected configuration
+      x-source: https://docs.api7.ai/ai-gateway/reference/resources-file.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1/audio/{audioid}:
+    post:
+      operationId: post_v1_audio_audioid
+      tags:
+      - Audio
+      summary: Send a Speech Request
+      x-source: https://docs.api7.ai/ai-gateway/endpoints/audio.md
+      parameters:
+      - name: audioid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV1AudioAudioidRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV1AudioAudioidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 3 example path(s) differing only at audioId
+  /v1/chat/completions:
+    post:
+      operationId: post_v1_chat_completions
+      tags:
+      - Chat
+      summary: OpenAI-compatible chat requests, audio input and output, streaming text, tool calling, routed models, and ensemble models.
+      x-source: https://docs.api7.ai/ai-gateway/endpoints/overview.md
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1/fine_tuning/jobs:
+    post:
+      operationId: post_v1_fine_tuning_jobs
+      tags:
+      - Fine Tuning
+      summary: OpenAI-compatible batch processing, file management, and fine-tuning jobs with gateway-managed provider routing.
+      x-source: https://docs.api7.ai/ai-gateway/endpoints/overview.md
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1/images/{imageid}:
+    post:
+      operationId: post_v1_images_imageid
+      tags:
+      - Images
+      summary: Multipart image-plus-prompt editing requests.
+      x-source: https://docs.api7.ai/ai-gateway/endpoints/overview.md
+      parameters:
+      - name: imageid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at imageId
+  /v1/messages/count_tokens:
+    post:
+      operationId: post_v1_messages_count_tokens
+      tags:
+      - Messages
+      summary: Anthropic-style messages requests and token counting for Anthropic-backed models.
+      x-source: https://docs.api7.ai/ai-gateway/endpoints/overview.md
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1/videos/{videoId}:
+    get:
+      operationId: get_v1_videos_videoId
+      tags:
+      - Videos
+      summary: 'Asynchronous text-to-video tasks: submit, poll status, and download the result.'
+      x-source: https://docs.api7.ai/ai-gateway/endpoints/overview.md
+      parameters:
+      - name: videoId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1/videos/{videoId}/content:
+    get:
+      operationId: get_v1_videos_videoId_content
+      tags:
+      - Videos
+      summary: 'Asynchronous text-to-video tasks: submit, poll status, and download the result.'
+      x-source: https://docs.api7.ai/ai-gateway/endpoints/overview.md
+      parameters:
+      - name: videoId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1/{v1id}:
+    get:
+      operationId: get_v1_v1id
+      tags:
+      - Api
+      summary: Return the model aliases the caller API key can access. Use it when a client needs to discover gateway-facing model names.
+      x-source: https://docs.api7.ai/ai-gateway/endpoints/overview.md
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at v1Id
+    post:
+      operationId: post_v1_v1id
+      tags:
+      - Api
+      summary: OpenAI-compatible batch processing, file management, and fine-tuning jobs with gateway-managed provider routing.
+      x-source: https://docs.api7.ai/ai-gateway/endpoints/overview.md
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 8 example path(s) differing only at v1Id
+components:
+  schemas:
+    GetAnythingResponse:
+      type: object
+      properties:
+        args:
+          type: object
+        data:
+          type: string
+        files:
+          type: object
+        form:
+          type: object
+        headers:
+          type: object
+          properties:
+            Accept:
+              type: string
+            Host:
+              type: string
+            User-Agent:
+              type: string
+            X-Amzn-Trace-Id:
+              type: string
+            X-Forwarded-Host:
+              type: string
+            X-User-Id:
+              type: string
+    PostAnythingBodyMatchRequest:
+      type: object
+      properties:
+        model:
+          type: string
+    GetAnythingJohndoeHelloResponse:
+      type: object
+      properties:
+        args:
+          type: object
+        data:
+          type: string
+        files:
+          type: object
+        form:
+          type: object
+        headers:
+          type: object
+          properties:
+            Accept:
+              type: string
+        json:
+          type:
+          - string
+          - 'null'
+        method:
+          type: string
+        origin:
+          type: string
+        url:
+          type: string
+    GetAnythingUserUseridProfileResponse:
+      type: object
+      properties:
+        args:
+          type: object
+        data:
+          type: string
+        files:
+          type: object
+        form:
+          type: object
+        headers:
+          type: object
+          properties:
+            Accept:
+              type: string
+            Host:
+              type: string
+            User-Agent:
+              type: string
+            X-Amzn-Trace-Id:
+              type: string
+            X-Forwarded-Host:
+              type: string
+            X-User-Id:
+              type: string
+    PatchApisixAdminServicesSrvCustomVarResponse:
+      type: object
+      properties:
+        args:
+          type: object
+        data:
+          type: string
+        files:
+          type: object
+        form:
+          type: object
+        headers:
+          type: object
+          properties:
+            Accept:
+              type: string
+        json:
+          type:
+          - string
+          - 'null'
+        method:
+          type: string
+        origin:
+          type: string
+        url:
+          type: string
+    PutApisixAdminAdminidResponse:
+      type: object
+      properties:
+        args:
+          type: object
+        headers:
+          type: object
+          properties:
+            Accept:
+              type: string
+            Host:
+              type: string
+            User-Agent:
+              type: string
+            X-Amzn-Trace-Id:
+              type: string
+            X-Forwarded-Host:
+              type: string
+        origin:
+          type: string
+        url:
+          type: string
+    GetGetResponse:
+      type: object
+      properties:
+        args:
+          type: object
+        headers:
+          type: object
+          properties:
+            Accept:
+              type: string
+            Host:
+              type: string
+            User-Agent:
+              type: string
+            X-Amzn-Trace-Id:
+              type: string
+            X-Forwarded-Host:
+              type: string
+        origin:
+          type: string
+        url:
+          type: string
+    PostV1AudioAudioidRequest:
+      type: object
+      properties:
+        model:
+          type: string
+          description: AISIX model alias for speech generation
+        input:
+          type: string
+          description: Text to be spoken
+        voice:
+          type: string
+          description: Voice identifier
+      required:
+      - model
+      - input
+    PostV1AudioAudioidResponse:
+      type: object
+      properties:
+        audio_bytes:
+          type: string
+          description: Generated speech audio
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-KEY
+security:
+- apiKey: []
+tags:
+- name: A2A
+- name: Anything
+- name: Api
+- name: Apisix
+- name: Audio
+- name: Chat
+- name: Debug
+- name: Fine Tuning
+- name: Get
+- name: Images
+- name: Livez
+- name: Messages
+- name: Metrics
+- name: Readyz
+- name: Status
+- name: Videos

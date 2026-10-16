@@ -1,0 +1,27 @@
+generated: '2026-10-15'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.api7.ai/api7-gateway/3.9.x/security-and-compliance/trust-center.md
+sources:
+- https://docs.api7.ai/api7-gateway/3.9.x/security-and-compliance/trust-center.md
+- https://docs.api7.ai/api7-gateway/security-and-compliance/trust-center.md
+- https://docs.api7.ai/ai-gateway/deployment/network-and-security.md
+- https://docs.api7.ai/api7-gateway/reference/hardening.md
+standards:
+- id: gdpr
+  conforms: true
+  evidence: For information about our commitment to protecting customer data, adherence to global privacy regulations (such as GDPR), or to request
+    a Data Processing Agreement (DPA), contact your API7 account manager or <sales@api7.ai>.
+- id: openapi-3.1
+  conforms: true
+  evidence: the document declares 3.1.0
+- id: oauth2
+  conforms: false
+  evidence: 'securitySchemes: apiKey (apiKey)'
+- id: rfc9457
+  conforms: false
+  evidence: no response declares application/problem+json
+- id: idempotency
+  conforms: false
+  evidence: no idempotency key parameter on mutating operations
+docs: https://docs.api7.ai/api7-gateway/3.9.x/security-and-compliance/trust-center.md

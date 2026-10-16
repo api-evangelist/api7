@@ -1,0 +1,159 @@
+generated: '2026-10-16'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/_ae-authored/api7-openapi-generated.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: No MCP server was found. The pre-flight posted tools/list to /mcp on api.api7.ai, api7.ai, docs.api7.ai; verdict absent. Candidate tools
+  below are derived from the 29 operation(s) in the provider's own OpenAPI (29 listed); they describe what a server WOULD expose, not one that
+  exists.
+tools:
+- name: post_a2a_agent
+  operationId: post_a2a_agent
+  method: POST
+  path: /a2a/{agent}
+  description: A2A JSON-RPC calls and caller-authenticated agent-card discovery for registered upstream agents.
+- name: get_a2a_agent_well_known_agent_card_json
+  operationId: get_a2a_agent_well_known_agent_card_json
+  method: GET
+  path: /a2a/{agent}/.well-known/agent-card.json
+  description: A2A JSON-RPC calls and caller-authenticated agent-card discovery for registered upstream agents.
+- name: get_anything
+  operationId: get_anything
+  method: GET
+  path: /anything
+  description: GET /anything
+- name: get_anything_body_match
+  operationId: get_anything_body_match
+  method: GET
+  path: /anything/body-match
+  description: GET /anything/body-match
+- name: post_anything_body_match
+  operationId: post_anything_body_match
+  method: POST
+  path: /anything/body-match
+  description: POST /anything/body-match
+- name: get_anything_johndoe_hello
+  operationId: get_anything_johndoe_hello
+  method: GET
+  path: /anything/johndoe/hello
+  description: GET /anything/johndoe/hello
+- name: get_anything_user_userid_profile
+  operationId: get_anything_user_userid_profile
+  method: GET
+  path: /anything/user/{userid}/profile
+  description: GET /anything/user/{userId}/profile
+- name: put_apisix_admin_plugin_metadata_http_logger
+  operationId: put_apisix_admin_plugin_metadata_http_logger
+  method: PUT
+  path: /apisix/admin/plugin_metadata/http-logger
+  description: PUT /apisix/admin/plugin_metadata/http-logger
+- name: get_apisix_admin_plugins_plugin_name
+  operationId: get_apisix_admin_plugins_pluginName
+  method: GET
+  path: /apisix/admin/plugins/{pluginName}
+  description: Retrieve the JSON Schema definition for a specific plugin.
+- name: put_apisix_admin_routes_body_match
+  operationId: put_apisix_admin_routes_body_match
+  method: PUT
+  path: /apisix/admin/routes/body-match
+  description: PUT /apisix/admin/routes/body-match
+- name: get_apisix_admin_schema_resource
+  operationId: get_apisix_admin_schema_resource
+  method: GET
+  path: /apisix/admin/schema/{resource}
+  description: Returns the JSON Schema document used internally by APISIX to validate the named resource type.
+- name: get_apisix_admin_secrets
+  operationId: get_apisix_admin_secrets
+  method: GET
+  path: /apisix/admin/secrets
+  description: Retrieve all configured secret manager integrations.
+- name: patch_apisix_admin_services_srv_custom_var
+  operationId: patch_apisix_admin_services_srv_custom_var
+  method: PATCH
+  path: /apisix/admin/services/srv_custom_var
+  description: PATCH /apisix/admin/services/srv_custom_var
+- name: put_apisix_admin_adminid
+  operationId: put_apisix_admin_adminid
+  method: PUT
+  path: /apisix/admin/{adminid}
+  description: PUT /apisix/admin/routes
+- name: get_debug_pprof_heap
+  operationId: get_debug_pprof_heap
+  method: GET
+  path: /debug/pprof/heap
+  description: Diagnostics listener
+- name: get_get
+  operationId: get_get
+  method: GET
+  path: /get
+  description: GET /get
+- name: get_livez
+  operationId: get_livez
+  method: GET
+  path: /livez
+  description: Check whether the proxy listener is alive. Use it for proxy listener health checks, not for model or provider readiness.
+- name: get_metrics
+  operationId: get_metrics
+  method: GET
+  path: /metrics
+  description: Metrics Reference
+- name: get_readyz
+  operationId: get_readyz
+  method: GET
+  path: /readyz
+  description: Check whether the instance should receive traffic. Returns 503 while draining.
+- name: get_status_config
+  operationId: get_status_config
+  method: GET
+  path: /status/config
+  description: Inspect the active or rejected configuration
+- name: post_v1_audio_audioid
+  operationId: post_v1_audio_audioid
+  method: POST
+  path: /v1/audio/{audioid}
+  description: Send a Speech Request
+- name: post_v1_chat_completions
+  operationId: post_v1_chat_completions
+  method: POST
+  path: /v1/chat/completions
+  description: OpenAI-compatible chat requests, audio input and output, streaming text, tool calling, routed models, and ensemble models.
+- name: post_v1_fine_tuning_jobs
+  operationId: post_v1_fine_tuning_jobs
+  method: POST
+  path: /v1/fine_tuning/jobs
+  description: OpenAI-compatible batch processing, file management, and fine-tuning jobs with gateway-managed provider routing.
+- name: post_v1_images_imageid
+  operationId: post_v1_images_imageid
+  method: POST
+  path: /v1/images/{imageid}
+  description: Multipart image-plus-prompt editing requests.
+- name: post_v1_messages_count_tokens
+  operationId: post_v1_messages_count_tokens
+  method: POST
+  path: /v1/messages/count_tokens
+  description: Anthropic-style messages requests and token counting for Anthropic-backed models.
+- name: get_v1_videos_video_id
+  operationId: get_v1_videos_videoId
+  method: GET
+  path: /v1/videos/{videoId}
+  description: 'Asynchronous text-to-video tasks: submit, poll status, and download the result.'
+- name: get_v1_videos_video_id_content
+  operationId: get_v1_videos_videoId_content
+  method: GET
+  path: /v1/videos/{videoId}/content
+  description: 'Asynchronous text-to-video tasks: submit, poll status, and download the result.'
+- name: get_v1_v1id
+  operationId: get_v1_v1id
+  method: GET
+  path: /v1/{v1id}
+  description: Return the model aliases the caller API key can access. Use it when a client needs to discover gateway-facing model names.
+- name: post_v1_v1id
+  operationId: post_v1_v1id
+  method: POST
+  path: /v1/{v1id}
+  description: OpenAI-compatible batch processing, file management, and fine-tuning jobs with gateway-managed provider routing.

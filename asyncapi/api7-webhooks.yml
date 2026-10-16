@@ -1,0 +1,23 @@
+generated: '2026-10-15'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.api7.ai/ingress-controller/troubleshooting/admission-webhook.md
+sources:
+- https://docs.api7.ai/ingress-controller/troubleshooting/admission-webhook.md
+- https://docs.api7.ai/ai-gateway/observability/metrics-and-usage-events.md
+- https://docs.api7.ai/ai-gateway/traffic-controls/budget-alerts.md
+- https://docs.api7.ai/api7-gateway/reference/approval-variables.md
+description: Captured webhook event surface for API7.ai
+events:
+- event: budget_threshold
+  description: Sent when spend crosses a configured percentage of a budget limit; the payload includes budget details, threshold percentage, spend
+    amount, and timestamps.
+- event: subscription_approval_created
+  description: Triggered when a developer’s request for an API product subscription is created and awaits approval.
+- event: subscription_approval_accepted
+  description: Triggered when a pending API product subscription request is approved.
+delivery:
+  content_type: application/json
+note: The documentation does not specify any signature header or authentication mechanism for webhook deliveries; deliveries are at‑least‑once
+  and may be retried, resulting in possible duplicate deliveries.
+docs: https://docs.api7.ai/ingress-controller/troubleshooting/admission-webhook.md

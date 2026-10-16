@@ -1,0 +1,20 @@
+generated: '2026-10-15'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://api7.ai/pricing
+sources:
+- https://api7.ai/pricing
+- https://docs.api7.ai/ai-gateway/cloud/model-pricing.md
+- https://docs.api7.ai/api7-gateway/3.9.x/upgrade-guides/upgrade.md
+- https://docs.api7.ai/api7-gateway/upgrade-guides/upgrade.md
+name: API7.ai pricing
+audience: business-product
+pricing_basis: negotiated
+plans:
+- name: API7 Cloud Standard
+  price_text: $2 per million
+  price: 2
+- name: API7 Cloud Premium
+  price_text: Contact Us
+docs: https://api7.ai/pricing
+note: 1 extracted row(s) were dropped because their quote was not on the page.

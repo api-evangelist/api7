@@ -1,0 +1,55 @@
+generated: '2026-10-16'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/api7-openapi-generated.yml
+vocabulary:
+  name: API7.ai Domain Vocabulary
+  description: 'Terms declared by API7.ai''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-16'
+  terms:
+  - term: GetAnythingResponse
+    definition: 'Object declared by the contract with fields: args, data, files, form, headers.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api7-openapi-generated.yml#/components/schemas/GetAnythingResponse
+  - term: PostAnythingBodyMatchRequest
+    definition: 'Object declared by the contract with fields: model.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api7-openapi-generated.yml#/components/schemas/PostAnythingBodyMatchRequest
+  - term: GetAnythingJohndoeHelloResponse
+    definition: 'Object declared by the contract with fields: args, data, files, form, headers, json, method, origin, url.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api7-openapi-generated.yml#/components/schemas/GetAnythingJohndoeHelloResponse
+  - term: GetAnythingUserUseridProfileResponse
+    definition: 'Object declared by the contract with fields: args, data, files, form, headers.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api7-openapi-generated.yml#/components/schemas/GetAnythingUserUseridProfileResponse
+  - term: PatchApisixAdminServicesSrvCustomVarResponse
+    definition: 'Object declared by the contract with fields: args, data, files, form, headers, json, method, origin, url.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api7-openapi-generated.yml#/components/schemas/PatchApisixAdminServicesSrvCustomVarResponse
+  - term: PutApisixAdminAdminidResponse
+    definition: 'Object declared by the contract with fields: args, headers, origin, url.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api7-openapi-generated.yml#/components/schemas/PutApisixAdminAdminidResponse
+  - term: GetGetResponse
+    definition: 'Object declared by the contract with fields: args, headers, origin, url.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api7-openapi-generated.yml#/components/schemas/GetGetResponse
+  - term: PostV1AudioAudioidRequest
+    definition: 'Object declared by the contract with fields: model, input, voice.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api7-openapi-generated.yml#/components/schemas/PostV1AudioAudioidRequest
+  - term: PostV1AudioAudioidResponse
+    definition: 'Object declared by the contract with fields: audio_bytes.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/api7-openapi-generated.yml#/components/schemas/PostV1AudioAudioidResponse

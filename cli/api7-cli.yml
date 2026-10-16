@@ -1,0 +1,24 @@
+generated: '2026-10-15'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.api7.ai/ai-gateway/reference/cli.md
+sources:
+- https://docs.api7.ai/ai-gateway/reference/cli.md
+- https://docs.api7.ai/ai-gateway/getting-started/anthropic-sdk.md
+- https://docs.api7.ai/ai-gateway/getting-started/openai-sdk.md
+- https://docs.api7.ai/ai-gateway/integrations/frameworks/openai-agents-sdk.md
+install:
+- method: docker
+  command: docker run --rm --entrypoint /usr/local/bin/aisix ghcr.io/api7/aisix:1.6.0 --help
+commands:
+- group: start
+  commands:
+  - aisix --config <CONFIG>
+- group: validate
+  commands:
+  - aisix validate --resources <FILE>
+- group: export
+  commands:
+  - aisix export --etcd <ENDPOINT> [-o <FILE>]
+binary: aisix
+docs: https://docs.api7.ai/ai-gateway/reference/cli.md

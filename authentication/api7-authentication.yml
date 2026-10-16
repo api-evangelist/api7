@@ -1,0 +1,49 @@
+generated: '2026-10-15'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.api7.ai/ai-gateway/agent-gateway/upstream-authentication.md
+sources:
+- https://docs.api7.ai/ai-gateway/agent-gateway/upstream-authentication.md
+- https://docs.api7.ai/ai-gateway/mcp-gateway/client-authentication.md
+- https://docs.api7.ai/ai-gateway/mcp-gateway/upstream-authentication.md
+- https://docs.api7.ai/ai-gateway/traffic-controls/caller-api-keys.md
+description: Authentication schemes documented for API7.ai AISIX gateway
+schemes:
+- type: http-bearer
+  name: Bearer token (upstream)
+  evidence: 'Authorization: Bearer <secret>'
+  location: header
+  header: Authorization
+  how_to_obtain: 'Configured as the `secret` field of an agent or MCP server with `auth_type: "bearer"`.'
+- type: apiKey
+  name: API key (upstream)
+  evidence: 'x-api-key: <secret>'
+  location: header
+  header: x-api-key
+  how_to_obtain: 'Configured as the `secret` field of an agent or MCP server with `auth_type: "api_key"`.'
+- type: oauth2
+  name: OAuth 2.0 client credentials (upstream)
+  evidence: 'Authorization: Bearer <access_token>'
+  location: header
+  header: Authorization
+  flows:
+  - client_credentials
+  token_url: value of `token_url` field in the MCP server resource
+  scopes:
+  - mcp.read
+  - mcp.write
+  how_to_obtain: 'Configured with `auth_type: "oauth2"`, providing `client_id`, `token_url`, `secret`, and optional `scopes` in the MCP server
+    definition.'
+- type: http-bearer
+  name: Gateway API key (client to AISIX)
+  evidence: 'Authorization: Bearer <api key>'
+  location: header
+  header: Authorization
+  how_to_obtain: Provided as the caller's API key (`AISIX_MCP_KEY`) and sent on each request.
+- type: apiKey
+  name: Gateway API key (alternative header)
+  evidence: 'x-api-key: <api key>'
+  location: header
+  header: x-api-key
+  how_to_obtain: Alternative to the bearer header for the caller's API key.
+docs: https://docs.api7.ai/ai-gateway/agent-gateway/upstream-authentication.md

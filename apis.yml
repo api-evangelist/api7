@@ -1,23 +1,120 @@
 aid: api7
 name: API7.ai
-description: 'API7.ai is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
-  and added to the network as a stub for full-pipeline profiling.'
+image: https://static.api7.ai/uploads/2023/03/28/hnmYHcii_api7.ai.webp
+description: API7.ai provides an enterprise‑grade API gateway and AI gateway platform, enabling organizations to manage, secure, and monitor APIs
+  as well as LLM and AI‑agent traffic. Built by the original creators of Apache APISIX, the solution offers features such as traffic routing,
+  rate‑limiting, observability, and AI‑native capabilities through its AISIX product. The company offers cloud‑hosted and on‑premises deployments,
+  comprehensive documentation, pricing plans, and a developer portal for integration.
 url: https://raw.githubusercontent.com/api-evangelist/api7/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-16 (modular-v1; was harvest)
 specificationVersion: '0.20'
 created: '2026-10-15'
 modified: '2026-10-15'
 tags:
 - Company
-apis: []
+- API Gateway
+- AI Gateway
+- Open Source
+- Cloud
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: RateLimits
+  url: rate-limits/api7-rate-limits.yml
+- type: Plans
+  url: plans/api7-plans-pricing.yml
+- type: Spectral
+  url: rules/api7-rules.yml
+- type: JSONLD
+  url: json-ld/api7-context.jsonld
+- type: Vocabulary
+  url: vocabulary/api7-vocabulary.yml
+- type: Webhooks
+  url: asyncapi/api7-webhooks.yml
+- type: DataModel
+  url: data-model/api7-data-model.yml
+- type: CLI
+  url: cli/api7-cli.yml
+- type: ChangeLog
+  url: changelog/api7-changelog.yml
+- type: Compliance
+  url: https://api7.ai/trust
+- type: Authentication
+  url: authentication/api7-authentication.yml
+- type: Conformance
+  url: conformance/api7-conformance.yml
+- type: LLMsTxt
+  url: llms/api7-llms.txt
+- type: Hosts
+  url: hosts/api7-hosts.yml
+- type: Vendors
+  url: vendors/api7-vendors.yml
+- type: TermsOfService
+  url: https://api7.ai/terms
+- type: PrivacyPolicy
+  url: https://api7.ai/privacy
+- type: Pricing
+  url: https://api7.ai/pricing
+- type: Newsroom
+  url: https://api7.ai/news
+- type: Blog
+  url: https://api7.ai/blog
+- type: GettingStarted
+  url: https://docs.api7.ai/ai-gateway/agent-gateway/setup
+- type: Documentation
+  url: https://docs.api7.ai/
+- type: TrustCenter
+  url: security/api7-trust-center.yml
+- type: DomainSecurity
+  url: security/api7-domain-security.yml
 - type: Website
   url: https://api7.ai/
+apis:
+- name: API7 Enterprise Developer Portal
+  description: API7 Enterprise Developer Portal APIs allow creation and management of developer portal resources.
+  humanURL: https://docs.api7.ai/ai-gateway/reference/admin-api.md
+  baseURL: ''
+  aid: api7:api7-enterprise-developer-portal
+- aid: api7:api7-api
+  name: API7.ai API
+  description: 'API7.ai API as documented publicly: 29 operations. Contract generated from the documentation by API Evangelist (2026-10-15); not
+
+    the provider''s own document.'
+  humanURL: https://docs.api7.ai/ai-gateway/endpoints/audio.md
+  baseURL: http://test1.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/api7-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-user-userid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-johndoe-hello-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-patch-apisix-admin-services-srv-custom-var-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-get-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-put-apisix-admin-adminid-response-schema.json
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: Documentation provides API references but no machine‑readable OpenAPI spec was found.
+  evidence:
+  - url: https://docs.api7.ai/ai-gateway/reference/admin-api.md
+    status: 200
+  checked: '2026-10-15'
+x-enrichment:
+  date: '2026-10-16'
+  status: enriched
+  artifacts_added: 27
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

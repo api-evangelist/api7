@@ -1,0 +1,31 @@
+generated: '2026-10-15'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.api7.ai/ai-gateway/agent-gateway/traffic-controls.md
+sources:
+- https://docs.api7.ai/ai-gateway/agent-gateway/traffic-controls.md
+- https://docs.api7.ai/ai-gateway/mcp-gateway/traffic-controls.md
+- https://docs.api7.ai/ai-gateway/traffic-controls/rate-limit-policies.md
+- https://docs.api7.ai/ai-gateway/traffic-controls/rate-limits.md
+name: API7.ai rate limits
+limits:
+- name: caller_api_key_rpm
+  limit_text: one request per minute
+  max: 1
+  window: minute
+  scope: caller API key
+  endpoint: /a2a/<agent> and model endpoints
+- name: mcp_tool_rpm
+  limit_text: one request per minute
+  max: 1
+  window: minute
+  scope: caller API key (MCP)
+  endpoint: tools/call
+headers:
+- X-RateLimit-Limit
+- X-RateLimit-Remaining
+- X-RateLimit-Reset
+- X-RateLimit-Scope
+- Retry-After
+exhaustion_status: 429
+docs: https://docs.api7.ai/ai-gateway/agent-gateway/traffic-controls.md

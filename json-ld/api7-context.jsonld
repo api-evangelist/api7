@@ -1,0 +1,73 @@
+{
+  "@context": {
+    "@vocab": "https://api7.ai/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "api7": "https://api7.ai/schema#",
+    "GetAnythingResponse": "api7:GetAnythingResponse",
+    "args": {
+      "@id": "api7:args"
+    },
+    "data": {
+      "@id": "api7:data",
+      "@type": "xsd:string"
+    },
+    "files": {
+      "@id": "api7:files"
+    },
+    "form": {
+      "@id": "api7:form"
+    },
+    "headers": {
+      "@id": "api7:headers"
+    },
+    "PostAnythingBodyMatchRequest": "api7:PostAnythingBodyMatchRequest",
+    "model": {
+      "@id": "api7:model",
+      "@type": "xsd:string"
+    },
+    "GetAnythingJohndoeHelloResponse": "api7:GetAnythingJohndoeHelloResponse",
+    "json": {
+      "@id": "api7:json",
+      "@type": "xsd:string"
+    },
+    "method": {
+      "@id": "api7:method",
+      "@type": "xsd:string"
+    },
+    "origin": {
+      "@id": "api7:origin",
+      "@type": "xsd:string"
+    },
+    "url": {
+      "@id": "api7:url",
+      "@type": "xsd:string"
+    },
+    "GetAnythingUserUseridProfileResponse": "api7:GetAnythingUserUseridProfileResponse",
+    "PatchApisixAdminServicesSrvCustomVarResponse": "api7:PatchApisixAdminServicesSrvCustomVarResponse",
+    "PutApisixAdminAdminidResponse": "api7:PutApisixAdminAdminidResponse",
+    "GetGetResponse": "api7:GetGetResponse",
+    "PostV1AudioAudioidRequest": "api7:PostV1AudioAudioidRequest",
+    "input": {
+      "@id": "api7:input",
+      "@type": "xsd:string"
+    },
+    "voice": {
+      "@id": "api7:voice",
+      "@type": "xsd:string"
+    },
+    "PostV1AudioAudioidResponse": "api7:PostV1AudioAudioidResponse",
+    "audio_bytes": {
+      "@id": "api7:audio_bytes",
+      "@type": "xsd:string"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "API7.ai API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects API7.ai's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-16) from openapi/_ae-authored/api7-openapi-generated.yml.",
+  "dcterms:created": "2026-10-16",
+  "dcterms:source": [
+    "openapi/_ae-authored/api7-openapi-generated.yml"
+  ]
+}
