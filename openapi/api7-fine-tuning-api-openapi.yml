@@ -1,0 +1,55 @@
+openapi: 3.2.0
+info:
+  title: API7.ai Fine Tuning API
+  version: '2026-10-15'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-15: 29 operation(s) read from 13 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; API7.ai has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 13
+    documentation: 16
+    pages-with-code: 3
+    pages-read: 13
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-15'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.api7.ai/ai-gateway/endpoints/audio.md
+  - https://docs.api7.ai/ai-gateway/reference/ports.md
+  - https://docs.api7.ai/apisix/reference/admin-api.md
+  - https://docs.api7.ai/ai-gateway/endpoints/rerank.md
+  - https://docs.api7.ai/ai-gateway/reference/metrics.md
+  - https://docs.api7.ai/ai-gateway/endpoints/overview.md
+  - https://docs.api7.ai/ai-gateway/endpoints/realtime.md
+  - https://docs.api7.ai/ai-gateway/reference/proxy-api.md
+  - https://docs.api7.ai/ai-gateway/endpoints/chat-audio.md
+  - https://docs.api7.ai/apisix/reference/router-options.md
+  - https://docs.api7.ai/apisix/reference/batch-processor.md
+  - https://docs.api7.ai/ai-gateway/reference/resources-file.md
+  - https://docs.api7.ai/apisix/reference/built-in-variables.md
+servers:
+- url: http://test1.com
+security:
+- apiKey: []
+tags:
+- name: Fine Tuning
+paths:
+  /v1/fine_tuning/jobs:
+    post:
+      operationId: post_v1_fine_tuning_jobs
+      tags:
+      - Fine Tuning
+      summary: OpenAI-compatible batch processing, file management, and fine-tuning jobs with…
+      x-source: https://docs.api7.ai/ai-gateway/endpoints/overview.md
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-KEY

@@ -1,0 +1,36 @@
+{
+  "provider": "api7",
+  "sources": [
+    "_ae-authored/api7-openapi-generated.yml"
+  ],
+  "outputs": [
+    "api7-a2a-api-openapi.yml",
+    "api7-api7-ai-api-api-openapi.yml",
+    "api7-anything-api-openapi.yml",
+    "api7-apisix-api-openapi.yml",
+    "api7-audio-api-openapi.yml",
+    "api7-chat-api-openapi.yml",
+    "api7-debug-api-openapi.yml",
+    "api7-fine-tuning-api-openapi.yml",
+    "api7-get-api-openapi.yml",
+    "api7-images-api-openapi.yml",
+    "api7-livez-api-openapi.yml",
+    "api7-messages-api-openapi.yml",
+    "api7-metrics-api-openapi.yml",
+    "api7-readyz-api-openapi.yml",
+    "api7-status-api-openapi.yml",
+    "api7-videos-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "api7-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "api7-openapi-generated.yml: tagged paths GET /v1/{v1id} -> API7.ai API",
+    "api7-openapi-generated.yml: tagged paths POST /v1/{v1id} -> API7.ai API",
+    "api7-openapi-generated.yml: declared missing tag: API7.ai API",
+    "apis.yml register: written (+16 apis, 17 total)"
+  ],
+  "skipped": []
+}

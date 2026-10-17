@@ -77,21 +77,351 @@ common:
   url: https://api7.ai/
 apis:
 - name: API7 Enterprise Developer Portal
-  description: API7 Enterprise Developer Portal APIs allow creation and management of developer portal resources.
+  description: >-
+    API7 Enterprise Developer Portal APIs allow creation and management of developer portal resources.
   humanURL: https://docs.api7.ai/ai-gateway/reference/admin-api.md
   baseURL: ''
   aid: api7:api7-enterprise-developer-portal
-- aid: api7:api7-api
-  name: API7.ai API
-  description: 'API7.ai API as documented publicly: 29 operations. Contract generated from the documentation by API Evangelist (2026-10-15); not
-
-    the provider''s own document.'
-  humanURL: https://docs.api7.ai/ai-gateway/endpoints/audio.md
+- aid: api7:api7-a2a-api
+  name: API7.ai A2A API
+  description: The A2A API from API7.ai — 2 operation(s) for a2a.
+  humanURL: https://docs.api7.ai/ai-gateway/reference/admin-api.md
   baseURL: http://test1.com
+  tags:
+  - A2A
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/api7-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/api7-a2a-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-user-userid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-johndoe-hello-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-patch-apisix-admin-services-srv-custom-var-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-get-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-put-apisix-admin-adminid-response-schema.json
+- aid: api7:api7-anything-api
+  name: API7.ai Anything API
+  description: The Anything API from API7.ai — 4 operation(s) for anything.
+  humanURL: https://docs.api7.ai/ai-gateway/reference/admin-api.md
+  baseURL: http://test1.com
+  tags:
+  - Anything
+  properties:
+  - type: OpenAPI
+    url: openapi/api7-anything-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-user-userid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-johndoe-hello-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-patch-apisix-admin-services-srv-custom-var-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-get-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-put-apisix-admin-adminid-response-schema.json
+- aid: api7:api7-api7-ai-api-api
+  name: API7.ai API7.ai API
+  description: The API7.ai API API from API7.ai — 1 operation(s) for api7.ai api.
+  humanURL: https://docs.api7.ai/ai-gateway/reference/admin-api.md
+  baseURL: http://test1.com
+  tags:
+  - API7.ai API
+  properties:
+  - type: OpenAPI
+    url: openapi/api7-api7-ai-api-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-user-userid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-johndoe-hello-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-patch-apisix-admin-services-srv-custom-var-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-get-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-put-apisix-admin-adminid-response-schema.json
+- aid: api7:api7-apisix-api
+  name: API7.ai Apisix API
+  description: The Apisix API from API7.ai — 7 operation(s) for apisix.
+  humanURL: https://docs.api7.ai/ai-gateway/reference/admin-api.md
+  baseURL: http://test1.com
+  tags:
+  - Apisix
+  properties:
+  - type: OpenAPI
+    url: openapi/api7-apisix-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-user-userid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-johndoe-hello-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-patch-apisix-admin-services-srv-custom-var-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-get-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-put-apisix-admin-adminid-response-schema.json
+- aid: api7:api7-audio-api
+  name: API7.ai Audio API
+  description: The Audio API from API7.ai — 1 operation(s) for audio.
+  humanURL: https://docs.api7.ai/ai-gateway/reference/admin-api.md
+  baseURL: http://test1.com
+  tags:
+  - Audio
+  properties:
+  - type: OpenAPI
+    url: openapi/api7-audio-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-user-userid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-johndoe-hello-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-patch-apisix-admin-services-srv-custom-var-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-get-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-put-apisix-admin-adminid-response-schema.json
+- aid: api7:api7-debug-api
+  name: API7.ai Debug API
+  description: The Debug API from API7.ai — 1 operation(s) for debug.
+  humanURL: https://docs.api7.ai/ai-gateway/reference/admin-api.md
+  baseURL: http://test1.com
+  tags:
+  - Debug
+  properties:
+  - type: OpenAPI
+    url: openapi/api7-debug-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-user-userid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-johndoe-hello-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-patch-apisix-admin-services-srv-custom-var-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-get-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-put-apisix-admin-adminid-response-schema.json
+- aid: api7:api7-fine-tuning-api
+  name: API7.ai Fine Tuning API
+  description: The Fine Tuning API from API7.ai — 1 operation(s) for fine tuning.
+  humanURL: https://docs.api7.ai/ai-gateway/reference/admin-api.md
+  baseURL: http://test1.com
+  tags:
+  - Fine Tuning
+  properties:
+  - type: OpenAPI
+    url: openapi/api7-fine-tuning-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-user-userid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-johndoe-hello-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-patch-apisix-admin-services-srv-custom-var-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-get-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-put-apisix-admin-adminid-response-schema.json
+- aid: api7:api7-get-api
+  name: API7.ai Get API
+  description: The Get API from API7.ai — 1 operation(s) for get.
+  humanURL: https://docs.api7.ai/ai-gateway/reference/admin-api.md
+  baseURL: http://test1.com
+  tags:
+  - Get
+  properties:
+  - type: OpenAPI
+    url: openapi/api7-get-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-user-userid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-johndoe-hello-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-patch-apisix-admin-services-srv-custom-var-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-get-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-put-apisix-admin-adminid-response-schema.json
+- aid: api7:api7-images-api
+  name: API7.ai Images API
+  description: The Images API from API7.ai — 1 operation(s) for images.
+  humanURL: https://docs.api7.ai/ai-gateway/reference/admin-api.md
+  baseURL: http://test1.com
+  tags:
+  - Images
+  properties:
+  - type: OpenAPI
+    url: openapi/api7-images-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-user-userid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-johndoe-hello-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-patch-apisix-admin-services-srv-custom-var-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-get-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-put-apisix-admin-adminid-response-schema.json
+- aid: api7:api7-livez-api
+  name: API7.ai Livez API
+  description: The Livez API from API7.ai — 1 operation(s) for livez.
+  humanURL: https://docs.api7.ai/ai-gateway/reference/admin-api.md
+  baseURL: http://test1.com
+  tags:
+  - Livez
+  properties:
+  - type: OpenAPI
+    url: openapi/api7-livez-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-user-userid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-johndoe-hello-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-patch-apisix-admin-services-srv-custom-var-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-get-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-put-apisix-admin-adminid-response-schema.json
+- aid: api7:api7-messages-api
+  name: API7.ai Messages API
+  description: The Messages API from API7.ai — 1 operation(s) for messages.
+  humanURL: https://docs.api7.ai/ai-gateway/reference/admin-api.md
+  baseURL: http://test1.com
+  tags:
+  - Messages
+  properties:
+  - type: OpenAPI
+    url: openapi/api7-messages-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-user-userid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-johndoe-hello-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-patch-apisix-admin-services-srv-custom-var-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-get-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-put-apisix-admin-adminid-response-schema.json
+- aid: api7:api7-metrics-api
+  name: API7.ai Metrics API
+  description: The Metrics API from API7.ai — 1 operation(s) for metrics.
+  humanURL: https://docs.api7.ai/ai-gateway/reference/admin-api.md
+  baseURL: http://test1.com
+  tags:
+  - Metrics
+  properties:
+  - type: OpenAPI
+    url: openapi/api7-metrics-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-user-userid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-johndoe-hello-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-patch-apisix-admin-services-srv-custom-var-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-get-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-put-apisix-admin-adminid-response-schema.json
+- aid: api7:api7-readyz-api
+  name: API7.ai Readyz API
+  description: The Readyz API from API7.ai — 1 operation(s) for readyz.
+  humanURL: https://docs.api7.ai/ai-gateway/reference/admin-api.md
+  baseURL: http://test1.com
+  tags:
+  - Readyz
+  properties:
+  - type: OpenAPI
+    url: openapi/api7-readyz-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-user-userid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-johndoe-hello-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-patch-apisix-admin-services-srv-custom-var-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-get-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-put-apisix-admin-adminid-response-schema.json
+- aid: api7:api7-status-api
+  name: API7.ai Status API
+  description: The Status API from API7.ai — 1 operation(s) for status.
+  humanURL: https://docs.api7.ai/ai-gateway/reference/admin-api.md
+  baseURL: http://test1.com
+  tags:
+  - Status
+  properties:
+  - type: OpenAPI
+    url: openapi/api7-status-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-user-userid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-johndoe-hello-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-patch-apisix-admin-services-srv-custom-var-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-get-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-put-apisix-admin-adminid-response-schema.json
+- aid: api7:api7-videos-api
+  name: API7.ai Videos API
+  description: The Videos API from API7.ai — 2 operation(s) for videos.
+  humanURL: https://docs.api7.ai/ai-gateway/reference/admin-api.md
+  baseURL: http://test1.com
+  tags:
+  - Videos
+  properties:
+  - type: OpenAPI
+    url: openapi/api7-videos-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-user-userid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-anything-johndoe-hello-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-patch-apisix-admin-services-srv-custom-var-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-get-get-response-schema.json
+  - type: JSONSchema
+    url: json-schema/api7-put-apisix-admin-adminid-response-schema.json
+- aid: api7:api7-chat-completions-api
+  name: API7.ai Chat Completions API
+  description: The Chat Completions API from API7.ai — 1 operation(s) for chat completions.
+  humanURL: https://docs.api7.ai/ai-gateway/reference/admin-api.md
+  baseURL: http://test1.com
+  tags:
+  - Chat Completions
+  properties:
+  - type: OpenAPI
+    url: openapi/api7-chat-completions-api-openapi.yml
   - type: JSONSchema
     url: json-schema/api7-get-anything-response-schema.json
   - type: JSONSchema
