@@ -18,3 +18,22 @@ plans:
   price_text: Contact Us
 docs: https://api7.ai/pricing
 note: 1 extracted row(s) were dropped because their quote was not on the page.
+x-canonical:
+  generated: '2026-10-23'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - subscription
+  units: []
+  plans:
+  - name: API7 Cloud Standard
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: API7 Cloud Premium
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
