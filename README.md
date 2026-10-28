@@ -64,5 +64,151 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-API7.ai is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog) and added to the network as a stub for full-pipeline profiling.
-- https://api7.ai/
+API7.ai provides an enterprise‑grade API gateway and AI gateway platform, enabling organizations to manage, secure, and monitor APIs as well as LLM and AI‑agent traffic. Built by the original creators of Apache APISIX, the solution offers features such as traffic routing, rate‑limiting, observability, and AI‑native capabilities through its AISIX product. The company offers cloud‑hosted and on‑premises deployments, comprehensive documentation, pricing plans, and a developer portal for integration.
+
+**Areas:** Company · API Gateway · AI Gateway · Open Source · Cloud
+
+## API7.ai on APIs.io
+
+Everything profiled for API7.ai is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/api7/](https://apis.io/providers/api7/)** — or go straight to one of the APIs or properties below.
+
+### APIs (17)
+
+- [API7 Enterprise Developer Portal](https://apis.io/apis/api7/api7-enterprise-developer-portal/) — API7 Enterprise Developer Portal APIs allow creation and management of developer portal resources.
+- [API7.ai A2A API](https://apis.io/apis/api7/api7-a2a-api/) — The A2A API from API7.ai — 2 operation(s) for a2a.
+- [API7.ai Anything API](https://apis.io/apis/api7/api7-anything-api/) — The Anything API from API7.ai — 4 operation(s) for anything.
+- [API7.ai API7.ai API](https://apis.io/apis/api7/api7-api7-ai-api-api/) — The API7.ai API API from API7.ai — 1 operation(s) for api7.ai api.
+- [API7.ai Apisix API](https://apis.io/apis/api7/api7-apisix-api/) — The Apisix API from API7.ai — 7 operation(s) for apisix.
+- [API7.ai Audio API](https://apis.io/apis/api7/api7-audio-api/) — The Audio API from API7.ai — 1 operation(s) for audio.
+- [API7.ai Debug API](https://apis.io/apis/api7/api7-debug-api/) — The Debug API from API7.ai — 1 operation(s) for debug.
+- [API7.ai Fine Tuning API](https://apis.io/apis/api7/api7-fine-tuning-api/) — The Fine Tuning API from API7.ai — 1 operation(s) for fine tuning.
+- [API7.ai Get API](https://apis.io/apis/api7/api7-get-api/) — The Get API from API7.ai — 1 operation(s) for get.
+- [API7.ai Images API](https://apis.io/apis/api7/api7-images-api/) — The Images API from API7.ai — 1 operation(s) for images.
+- [API7.ai Livez API](https://apis.io/apis/api7/api7-livez-api/) — The Livez API from API7.ai — 1 operation(s) for livez.
+- [API7.ai Messages API](https://apis.io/apis/api7/api7-messages-api/) — The Messages API from API7.ai — 1 operation(s) for messages.
+- [API7.ai Metrics API](https://apis.io/apis/api7/api7-metrics-api/) — The Metrics API from API7.ai — 1 operation(s) for metrics.
+- [API7.ai Readyz API](https://apis.io/apis/api7/api7-readyz-api/) — The Readyz API from API7.ai — 1 operation(s) for readyz.
+- [API7.ai Status API](https://apis.io/apis/api7/api7-status-api/) — The Status API from API7.ai — 1 operation(s) for status.
+- [API7.ai Videos API](https://apis.io/apis/api7/api7-videos-api/) — The Videos API from API7.ai — 2 operation(s) for videos.
+- [API7.ai Chat Completions API](https://apis.io/apis/api7/api7-chat-completions-api/) — The Chat Completions API from API7.ai — 1 operation(s) for chat completions.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Api7 Webhooks](https://apis.io/asyncapis/api7/api7-webhooks/)
+
+#### JSON Schema (6)
+
+The data models the API reads and writes.
+
+- [GetAnythingJohndoeHelloResponse](https://apis.io/schemas/api7/api7-get-anything-johndoe-hello-response/)
+- [GetAnythingResponse](https://apis.io/schemas/api7/api7-get-anything-response/)
+- [GetAnythingUserUseridProfileResponse](https://apis.io/schemas/api7/api7-get-anything-user-userid-profile-response/)
+- [GetGetResponse](https://apis.io/schemas/api7/api7-get-get-response/)
+- [PatchApisixAdminServicesSrvCustomVarResponse](https://apis.io/schemas/api7/api7-patch-apisix-admin-services-srv-custom-var-response/)
+- [PutApisixAdminAdminidResponse](https://apis.io/schemas/api7/api7-put-apisix-admin-adminid-response/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Api7 Context](https://apis.io/jsonld/api7/api7-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [API7.ai API Rules](https://apis.io/rules/api7/api7-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Api7 Authentication](https://apis.io/security/api7/api7-authentication/)
+- [Api7 Domain Security](https://apis.io/security/api7/api7-domain-security/)
+- [Api7 Trust Center](https://apis.io/security/api7/api7-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Api7 Plans Pricing](https://apis.io/plans/api7/api7-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Api7 Rate Limits](https://apis.io/rate-limits/api7/api7-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://api7.ai/)
+- [Documentation](https://docs.api7.ai/)
+- [Getting started](https://docs.api7.ai/ai-gateway/agent-gateway/setup)
+- [Pricing](https://api7.ai/pricing)
+- [Blog](https://api7.ai/blog)
+- [Compliance](https://api7.ai/trust)
+- [Terms of service](https://api7.ai/terms)
+- [Privacy policy](https://api7.ai/privacy)
+
+## API Evangelist rating
+
+**Kin Score 50.1** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 80.4 |
+| Contract quality | 33.3 |
+| Contract governance | 35.6 |
+| Operational transparency | 44.7 |
+| Developer ergonomics | 42.9 |
+| Access clarity | 68.4 |
+
+**Agent readiness 24.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | partial |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | — |
+
+**Regulatory alignment 29.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/api7/](https://apis.io/providers/api7/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for API7.ai: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/api7/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
